@@ -3,7 +3,7 @@ const { writeFileSync, mkdirSync, existsSync } = require('fs');
 const config = require('./config.json')
 
 const stats = async () => {
-    const fetched = await fetch(`https://owapi.io/profile/${config.plataform}/${config.region}/${config.username}-${config.tag}`);
+    const fetched = await fetch(`https://owapi.io/profile/${config.platform}/${config.region}/${config.username}-${config.tag}`);
     const data = await fetched.json();
     
     if(data.private) console.log('The profile is private, some data may be missing');
