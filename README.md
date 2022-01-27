@@ -6,7 +6,7 @@ This project was made with the purpose of providing a tool to facilitate the fac
 # 🍂 How to use
 As a first step you should download [**Node.js**](https://nodejs.org/), which will serve as the application's execution environment, without this you will not be able to execute the application.
 
-Then clone the repository on your desktop, so you will have access to the entire application.
+Then clone the repository on your desktop, so you will have access to the entire application (`git clone https://github.com/NejireSupremacy/Overwatch-label`).
 
 After having all the files, you will have to modify the **`config.json`** file to fill your profile, you will have to modify the data as indicated in the table (preferably have the public profile to obtain all the statistics).
 |Value|Description|
