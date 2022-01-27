@@ -16,7 +16,7 @@ After having all the files, you will have to modify the **`config.json`** file t
 | platform | The main platform you play on (pc/xbl/psn/nintendo-switch). |
 | region | The game region you normally play in (us/eu/kr/cn/global). |
 
-Then you will simply open the Windows terminal or the console of your choice, enter the directory and run the application with the command `node index.js`.
+Then you will simply open the Windows terminal or the console of your choice, enter the directory and run the application with the commands `npm i` (just the first time) and then `node index.js`.
 
 And that's it, you'll have the application console open and every 10 minutes it will be updating the data (I don't recommend having more than one process open at the same time).
 
