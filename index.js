@@ -16,8 +16,9 @@ function parseData(data, path){
 }
 
 const stats = async () => {
-    const fetched = await fetch(`https://owapi.io/profile/${config.platform}/${config.region}/${config.username}-${config.tag}`);
-    const data = await fetched.json();
+    const data = await fetch(
+        `https://owapi.io/profile/${config.platform}/${config.region}/${config.username}-${config.tag}`
+    ).then(stream => stream.json())
 
     if(data.private) console.log('The profile is private, some data may be missing');
     if('message' in data) throw new Error(`An unexpected message appeared: ${data.message}`);
