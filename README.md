@@ -17,7 +17,7 @@ In all 3 forms there is a common step that you must follow, you will have to mod
 **Do not move the config.json file from its source folder, doing so will cause problems**
 
 ## 🟨 Download the executable
-You can download the executable directly from [**this**](https://www.mediafire.com/file/y3p1lozbj7teu1h/Overwatch+label.rar/file) link and thus avoid multiple steps (the 3 executables will be downloaded, you can delete the folders of the non-compatible operating systems).
+You can download the executable directly from [**this**](https://github.com/NejireSupremacy/Overwatch-label/releases/tag/Official) link and thus avoid multiple steps (the 3 executables will be downloaded, you can delete the folders of the non-compatible operating systems).
 
 ## 🟧 Compile the application on your own
 If you like you can compile the executable for the application yourself, you just have to follow the following steps.
