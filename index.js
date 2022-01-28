@@ -22,9 +22,7 @@ const stats = async () => {
 
     if(data.private) console.log('The profile is private, some data may be missing');
     if('message' in data) throw new Error(`An unexpected message appeared: ${data.message}`);
-
-    if(!existsSync('./labels')) mkdirSync('./labels');
-    parseData(data, './labels');
+    if(!data.username) throw new Error(`Profile not found`);
 };
 
 stats().then(() => {
