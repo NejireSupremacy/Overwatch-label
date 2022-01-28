@@ -6,7 +6,7 @@ function parseData(data, path){
     for(const key in data){
         const newPath = `${path}/${key}`;
 
-        if(typeof data[key] === 'object'){
+        if(typeof data[key] === 'object' && data[key]){
             if(!existsSync(newPath)) mkdirSync(newPath);
             parseData(data[key], newPath);
         }else{
