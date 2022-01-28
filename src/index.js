@@ -1,6 +1,9 @@
 const fetch = require('node-fetch');
-const { writeFileSync, mkdirSync, existsSync } = require('fs');
-const config = require('./config.json')
+const { writeFileSync, mkdirSync, existsSync, readFileSync } = require('fs');
+const { join, dirname } = require('path');
+
+const configData = readFileSync(join(dirname(process.execPath), '..', 'config.json'), { encoding: 'utf8' });
+const config = JSON.parse(configData);
 
 function parseData(data, path){
     for(const key in data){
@@ -36,15 +39,19 @@ stats().then(() => {
             await stats()
             console.log(`Statistics have been updated`);
         } catch(e) {
-            console.log(`An error occurred, stopping the application`);
+            console.log(`An error occurred, stopping the application in 10 seconds`);
             console.log(e);
-            process.exit();
+            setTimeout(() => {
+                process.exit();
+            }, 10000);
     
         };
     }, 600000);
 }).catch((e) => {
-    console.log(`An error occurred, stopping the application`);
+    console.log(`An error occurred, stopping the application in 10 seconds`);
     console.log(e);
-    process.exit();
+    setTimeout(() => {
+        process.exit();
+    }, 10000);
 });
 
